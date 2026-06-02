@@ -1,17 +1,120 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Birthday Surprise</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Big Birthday Surprise</title>
+
+<style>
+body{
+margin:0;
+padding:0;
+background:#6a0dad;
+font-family:Arial;
+text-align:center;
+color:white;
+}
+
+.container{
+padding:30px;
+}
+
+button{
+padding:15px 25px;
+border:none;
+border-radius:15px;
+font-size:18px;
+}
+
+.gift{
+display:none;
+background:white;
+color:black;
+margin:20px;
+padding:20px;
+border-radius:20px;
+}
+
+a{
+color:yellow;
+font-size:20px;
+}
+</style>
+
+<script>
+function checkPassword(){
+var pass=document.getElementById("pass").value;
+
+if(pass=="2006"){
+document.getElementById("login").style.display="none";
+document.getElementById("main").style.display="block";
+}
+else{
+alert("Wrong Password");
+}
+}
+
+function openGift(){
+document.getElementById("giftbox").style.display="block";
+}
+</script>
+
 </head>
-<body style="text-align:center;font-family:Arial;background:purple;color:white;">
+
+<body>
+
+<div id="login" class="container">
 
 <h1>🎂 Big Birthday Surprise 🎂</h1>
 
-<h2>Welcome</h2>
+<p>Enter Password</p>
 
-<p>Happy Birthday ❤️</p>
+<input id="pass" type="password">
 
-<p>From Rohan</p>
+<br><br>
+
+<button onclick="checkPassword()">Open Surprise</button>
+
+</div>
+
+<div id="main" class="container" style="display:none;">
+
+<h1>💜 Happy Birthday Khushi 💜</h1>
+
+<p>From Rohan Kumar Meena</p>
+
+<button onclick="openGift()">🎁 Open Gift</button>
+
+<div id="giftbox" class="gift">
+
+<h2>💌 Special Letter</h2>
+
+<p>
+Tum unique ho.<br><br>
+
+Tumhari smile unique hai.<br><br>
+
+Tum bahut special ho.<br><br>
+
+Main dua karta hu ki tum hamesha khush raho.
+<br><br>
+
+❤️ Happy Birthday ❤️
+</p>
+
+<p>
+By Rohan Kumar Meena
+</p>
+
+</div>
+
+<br>
+
+<a href="https://youtu.be/SU752QTrz7A?si=6QLkdpq4vjtxEJrc" target="_blank">
+🎵 Play Song
+</a>
+
+</div>
 
 </body>
 </html>
